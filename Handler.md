@@ -29,7 +29,9 @@ Handler 机制
 
 #### 2.2 正确做法：
 
-###### 2.2.1 MyHandler 放到单独的类文件中；
+###### 2.2.1 MyHandler 放到单独的类文件中;
+###### 2.2.1 在 Activity 的 onDestroy() 方法中添加如下代码:
+        handler.removeCallbacksAndMessages(null);
 ###### 2.2.2 静态内部类：
 
     private MyHandler handler = new MyHandler(this);

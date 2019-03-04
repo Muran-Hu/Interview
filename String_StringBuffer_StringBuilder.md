@@ -10,6 +10,7 @@
     //关键点final private
     // private final char value[];
 ## 二、StringBuffer（线程安全） - extends AbstractStringBuilder， 可变 char 数组
+## 线程安全，即为每个方法加上 synchronized 关键字
     abstract class AbstractStringBuilder implements Appendable, CharSequence {
     /**
      * The value is used for character storage.
